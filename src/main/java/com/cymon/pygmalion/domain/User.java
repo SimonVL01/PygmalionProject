@@ -1,6 +1,7 @@
 package com.cymon.pygmalion.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by vdabcursist on 19/09/2017.
@@ -13,7 +14,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
+    private Integer id;
 
     //@Column (nullable = false)
     private String firstname;
@@ -24,40 +25,48 @@ public class User {
     private int age;
     private String gender = "Not defined";
 
+    @OneToMany
+    private List<Interest> interest;
+
+    @OneToMany
+    private List<WebDevice> webDevice;
+
 //Constructors
 
-    public User(String firstName, String lastName, int age, String gender) {
+    public User(String firstName, String lastName, int age, String gender, List<Interest> interest, List<WebDevice> webDevice) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.age = age;
         this.gender = gender;
+        this.interest = interest;
+        this.webDevice = webDevice;
     }
 
     public User() {}
 
-    //Getters & Setters
+//Getters & Setters
 
-    public String getFirstName() {
+    public String getFirstname() {
         return firstname;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstname(String firstName) {
         this.firstname = firstName;
     }
 
-    public String getLastName() {
+    public String getLastname() {
         return lastname;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastname(String lastName) {
         this.lastname = lastName;
     }
 
-    public int getAgeGroup() {
+    public int getAge() {
         return age;
     }
 
-    public void setAgeGroup(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -70,7 +79,31 @@ public class User {
         this.gender = gender;
     }
 
+    public List<Interest> getInterest() {
+        return interest;
+    }
+
+    public void setInterest(List<Interest> interest) {
+        this.interest = interest;
+    }
+
+    public void addInterest(int i, Interest interest) {
+        this.interest.add(interest);
+    }
+
+    public void deleteInterest(int i) {
+        this.interest.remove(i);
+    }
+
     public Integer getId() {
-        return Id;
+        return id;
+    }
+
+    public List<WebDevice> getWebDevice() {
+        return webDevice;
+    }
+
+    public void setWebDevice(List<WebDevice> webDevice) {
+        this.webDevice = webDevice;
     }
 }

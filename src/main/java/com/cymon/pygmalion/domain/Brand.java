@@ -16,7 +16,7 @@ public class Brand {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
+    private Integer id;
 
     //@Column(nullable = false)
     private String fullname;
@@ -48,11 +48,11 @@ public class Brand {
         this.fullname = fullName;
     }
 
-    public String getCompanyName() {
+    public String getCompanyname() {
         return companyname;
     }
 
-    public void setCompanyName(String companyName) {
+    public void setCompanyname(String companyName) {
         this.companyname = companyName;
     }
 
@@ -79,7 +79,7 @@ public class Brand {
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
 }

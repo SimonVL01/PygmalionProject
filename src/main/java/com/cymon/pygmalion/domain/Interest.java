@@ -1,6 +1,7 @@
 package com.cymon.pygmalion.domain;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,12 +11,26 @@ import java.util.List;
 @Entity
 public class Interest {
 
-    private List<String> categories;
+//State
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    public Interest(List<String> categories) {
-        for (String s : categories) {
-            categories.add(s);
-        }
+    private int Interestlevel;
+
+//Category
+
+    public Interest(int Interestlevel) {
+        this.Interestlevel = Interestlevel;
     }
 
+//Getters & Setters
+
+    public int getInterestlevel() {
+        return Interestlevel;
+    }
+
+    public void setInterestlevel(int interestlevel) {
+        Interestlevel = interestlevel;
+    }
 }
