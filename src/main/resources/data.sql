@@ -1,5 +1,11 @@
 insert into brand(id, fullname, companyname, companyUrl) values(2000, 'Simon Vanleeuw', 'Cy-mon Software', 'www.cymon.com');
 
+insert into brand(id, fullname, companyname, companyUrl) values(3000, 'Jimi Hendrix', 'Henrix nv', 'www.hendrix.be');
+insert into brand(id, fullname, companyname, companyUrl) values(4000, 'Elon Musk', 'Space X', 'www.spacex.com');
+insert into brand(id, fullname, companyname, companyUrl) values(5000, 'Janis', 'Joplin Searches', 'www.joplin.com');
+insert into brand(id, fullname, companyname, companyUrl) values(6000, 'Amy', 'Winehouse Mortuary', 'www.winehousemortuary.com');
+
+
 insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(1000, 'Simon', 'Vanleeuw', 25, 'Male', 1000, 2000);
 insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(2000, 'Janis', 'Joplin', 45, 'Female', 1000, 2000);
 insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(3000, 'Jessica', 'Parker', 12, 'Female', 1000, 2000);

@@ -17,6 +17,8 @@ public interface BrandRepository extends JpaRepository<Brand, Integer> {
 
     //User findById(Integer id);
 
+    Brand findById(Integer id);
+
     User findByFullname(String fullname);
 
     User findByCompanyname(String companyname);

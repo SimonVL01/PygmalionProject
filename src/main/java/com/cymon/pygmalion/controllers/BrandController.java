@@ -14,21 +14,22 @@ import java.util.List;
  */
 
 @RestController
+@RequestMapping("/brand")
 public class BrandController {
 
     @Autowired
     BrandRepository br;
 
-    @RequestMapping(method = RequestMethod.GET, path = "api/brand/all", produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, path = "/all", produces = "application/json")
     public List<Brand> findAll() { return br.findAll(); }
 
-    @RequestMapping(method = RequestMethod.GET, path = "api/brand/{bid}", produces = "appliction/json")
-    public Brand findMostPopularUserAge(@PathVariable("bid") int id) {
-        return br.findOne(id);
-    }
+    /*@RequestMapping(method = RequestMethod.GET, path = "api/brand/{bid}", produces = "appliction/json")
+    public Brand findMostPopularUserAge(@PathVariable("bid") Integer id) {
+        return br.findById(id);
+    }*/
 
-    @RequestMapping(method = RequestMethod.POST, path = "api/brand", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<Brand> create(@RequestBody Brand brand) {
+    @RequestMapping(method = RequestMethod.GET, path = "/{bid}", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<Brand> create(@PathVariable("bid") int id, @RequestBody Brand brand) {
         if (brand.getId() != null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
