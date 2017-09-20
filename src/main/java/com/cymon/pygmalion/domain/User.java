@@ -1,6 +1,7 @@
 package com.cymon.pygmalion.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,10 +31,10 @@ public class User {
     @ManyToMany
     @JoinTable/*(
             name = "Interest",
-            joinColumns = @JoinColumn(name = "Iinterest_id"),
+            joinColumns = @JoinColumn(name = "interest_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )*/
-    private List<Interest> interest;
+    private List<Interest> interest = new ArrayList<>();
 
     @ManyToOne
     private User followed;
@@ -46,11 +47,12 @@ public class User {
 
 //Constructors
 
-    public User(String firstName, String lastName, int age, String gender) {
+    public User(String firstName, String lastName, int age, String gender, User followed) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.age = age;
         this.gender = gender;
+        this.followed = followed;
         //this.webDevice = webDevice;
     }
 
