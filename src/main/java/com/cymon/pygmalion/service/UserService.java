@@ -14,10 +14,6 @@ import java.util.List;
 @Service
 public class UserService {
 
-    public UserService() {
-        System.out.println("FlightService gemaakt.");
-    }
-
     @Autowired
     UserRepository ur;
 

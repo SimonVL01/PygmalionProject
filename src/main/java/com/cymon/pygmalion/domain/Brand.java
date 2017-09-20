@@ -3,6 +3,7 @@ package com.cymon.pygmalion.domain;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,14 +27,16 @@ public class Brand {
     private String companyurl;
 
     @OneToMany
-    private List<User> targetAudience;
+    @JoinColumn(name = "brand_id")
+    private List<User> targetAudience = new ArrayList<>();
 
 //Constructors
 
-    public Brand(String fullname, String companyname, String companyurl) {
+    public Brand(String fullname, String companyname, String companyurl, List<User> targetAudience) {
         this.fullname = fullname;
         this.companyname = companyname;
         this.companyurl = companyurl;
+        this.targetAudience = targetAudience;
     }
 
     public Brand() {}

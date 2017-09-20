@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Persona</title>
+</head>
+<body>
+
+<table>
+    <tr th:each="t : ${brand.targetAudience}">
+        <td th:text="${t.firstname}"></td>
+        <td th:text="${t.lastname}"></td>
+        <td th:text="${t.age}"></td>
+        <td th:text="${t.gender}"></td>
+        <td th:text="${t.interest}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>

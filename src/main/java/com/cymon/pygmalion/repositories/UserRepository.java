@@ -19,10 +19,13 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     User findByLastname(String lastname);
 
-    @Query(value = "SELECT u FROM User u WHERE u.gender = :m")
-    List<User> selectMaleUsers(@Param("m") String gender);
+    @Query(value = "SELECT u FROM User u WHERE u.gender = 'Male'")
+    List<User> selectMaleUsers();
 
-    @Query(value = "SELECT u FROM User u WHERE u.gender = :f")
-    List<User> selectFemaleUsers(@Param("f") String gender);
+    @Query(value = "SELECT u FROM User u WHERE u.gender = 'Female'")
+    List<User> selectFemaleUsers();
+
+    //@Query(value = "SELECT u.age FROM User u ORDER BY count(*) desc")
+    //int selectPopularAge();
 
 }

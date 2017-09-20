@@ -12,25 +12,41 @@ import java.util.List;
 public class Interest {
 
 //State
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private int Interestlevel;
+    private String interest;
+
+    private int interestlevel;
 
 //Category
 
-    public Interest(int Interestlevel) {
-        this.Interestlevel = Interestlevel;
+    public Interest(String interest ,int interestlevel) {
+        this.interest = interest;
+        this.interestlevel = interestlevel;
     }
 
 //Getters & Setters
 
+    public String getInterest() {
+        return interest;
+    }
+
+    public void setInterest(String interest) {
+        this.interest = interest;
+    }
+
     public int getInterestlevel() {
-        return Interestlevel;
+        return interestlevel;
     }
 
     public void setInterestlevel(int interestlevel) {
-        Interestlevel = interestlevel;
+        interestlevel = interestlevel;
+    }
+
+    public int getId() {
+        return id;
     }
 }

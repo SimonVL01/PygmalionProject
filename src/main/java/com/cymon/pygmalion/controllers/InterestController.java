@@ -1,5 +1,6 @@
 package com.cymon.pygmalion.controllers;
 
+import com.cymon.pygmalion.repositories.InterestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InterestController {
 
     @Autowired
-    InterestController ir;
+    InterestRepository ir;
 
     //More to come...
 

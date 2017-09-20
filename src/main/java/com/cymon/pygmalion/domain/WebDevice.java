@@ -1,14 +1,14 @@
-package com.cymon.pygmalion.domain;
+/*package com.cymon.pygmalion.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+*/
 /**
  * Created by simon on 19/09/17.
  */
-
+/*
 @Entity
 public class WebDevice {
 
@@ -18,35 +18,36 @@ public class WebDevice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
 
-    private String deviceType;
+    private String devicetype;
 
-    private String deviceName;
+    private String devicename;
 
     private int deviceUseRatio;
 
 //Constructors
 
-    public WebDevice(String deviceType, String deviceName) {
-        this.deviceType = deviceType;
-        this.deviceName = deviceName;
+    public WebDevice(String deviceType, String deviceName, int deviceUseRatio) {
+        this.devicetype = deviceType;
+        this.devicename = deviceName;
+        this.deviceUseRatio = deviceUseRatio;
     }
 
 //Getters and Setters
 
     public String getDeviceType() {
-        return deviceType;
+        return devicetype;
     }
 
     public void setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
+        this.devicetype = deviceType;
     }
 
     public String getDeviceName() {
-        return deviceName;
+        return devicename;
     }
 
     public void setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
+        this.devicename = deviceName;
     }
 
     public Integer getId() {
@@ -61,3 +62,4 @@ public class WebDevice {
         this.deviceUseRatio = deviceUseRatio;
     }
 }
+*/

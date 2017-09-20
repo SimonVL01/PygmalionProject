@@ -25,21 +25,33 @@ public class User {
     private int age;
     private String gender = "Not defined";
 
-    @OneToMany
+//Dependencies
+
+    @ManyToMany
+    @JoinTable/*(
+            name = "Interest",
+            joinColumns = @JoinColumn(name = "Iinterest_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )*/
     private List<Interest> interest;
 
-    @OneToMany
-    private List<WebDevice> webDevice;
+    @ManyToOne
+    private User followed;
+
+    @OneToMany(mappedBy = "followed")
+    private List<User> follower;
+
+    //@OneToMany
+    //private List<WebDevice> webDevice;
 
 //Constructors
 
-    public User(String firstName, String lastName, int age, String gender, List<Interest> interest, List<WebDevice> webDevice) {
+    public User(String firstName, String lastName, int age, String gender) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.age = age;
         this.gender = gender;
-        this.interest = interest;
-        this.webDevice = webDevice;
+        //this.webDevice = webDevice;
     }
 
     public User() {}
@@ -99,11 +111,24 @@ public class User {
         return id;
     }
 
-    public List<WebDevice> getWebDevice() {
+    /*public List<WebDevice> getWebDevice() {
         return webDevice;
-    }
+    }*/
 
-    public void setWebDevice(List<WebDevice> webDevice) {
+    /*public void setWebDevice(List<WebDevice> webDevice) {
         this.webDevice = webDevice;
+    }*/
+
+//Other Methods
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'';
     }
 }
