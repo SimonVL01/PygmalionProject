@@ -18,7 +18,7 @@ public interface BrandRepository extends JpaRepository<Brand, Integer> {
 
     User findByCompanyname(String companyname);
 
-
+    //@Query(value = "SELECT u.age from User u GROUP BY ")
 
     //@Query(value = "SELECT top 1 b.targetAudience.age FROM Brand b.targetAudience ORDER BY count(*) desc")
     //public int selectPopularAge();

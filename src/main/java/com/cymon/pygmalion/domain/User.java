@@ -29,7 +29,7 @@ public class User {
 //Dependencies
 
     @ManyToMany
-    @JoinTable/*(
+    @JoinTable /*(
             name = "Interest",
             joinColumns = @JoinColumn(name = "interest_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
