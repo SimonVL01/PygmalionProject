@@ -19,9 +19,9 @@ public class PygmalionApplication {
 		//BrandRepository br = ac.getBean("brandRepository", BrandRepository.class);
 		//System.out.println(br.selectPopularAge());
 
-		UserRepository ur = ac.getBean("userRepository", UserRepository.class);
+		/*UserRepository ur = ac.getBean("userRepository", UserRepository.class);
 		System.out.println(ur.selectFemaleUsers().toString());
-		System.out.println(ur.selectMaleUsers().toString());
+		System.out.println(ur.selectMaleUsers().toString());*/
 
 
 		/*

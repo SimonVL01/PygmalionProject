@@ -10,26 +10,23 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class WebDevice {
+public class Webdevice {
 
 //State
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer Id;
+    private Integer id;
 
     private String devicetype;
 
     private String devicename;
 
-    private int deviceUseRatio;
-
 //Constructors
 
-    public WebDevice(String deviceType, String deviceName, int deviceUseRatio) {
+    public Webdevice(String deviceType, String deviceName) {
         this.devicetype = deviceType;
         this.devicename = deviceName;
-        this.deviceUseRatio = deviceUseRatio;
     }
 
 //Getters and Setters
@@ -51,14 +48,7 @@ public class WebDevice {
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
-    public int getDeviceUseRatio() {
-        return deviceUseRatio;
-    }
-
-    public void setDeviceUseRatio(int deviceUseRatio) {
-        this.deviceUseRatio = deviceUseRatio;
-    }
 }

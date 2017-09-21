@@ -42,9 +42,8 @@ public class User {
     @OneToMany(mappedBy = "followed")
     private List<User> follower;
 
-    @OneToMany
-    @JoinColumn(name = "user_id")
-    private List<WebDevice> webDevice;
+    @ManyToMany
+    private List<Webdevice> webdevice = new ArrayList<>();
 
 //Constructors
 
@@ -107,6 +106,14 @@ public class User {
 
     public void deleteInterest(int i) {
         this.interest.remove(i);
+    }
+
+    public List<Webdevice> getWebdevice() {
+        return webdevice;
+    }
+
+    public void setWebdevice(List<Webdevice> webdevice) {
+        this.webdevice = webdevice;
     }
 
     public Integer getId() {

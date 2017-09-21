@@ -1,6 +1,6 @@
 package com.cymon.pygmalion.service;
 
-import com.cymon.pygmalion.repositories.WebDeviceRepository;
+import com.cymon.pygmalion.repositories.WebdeviceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class WebDeviceService {
+public class WebdeviceService {
 
     @Autowired
-    WebDeviceRepository wr;
+    WebdeviceRepository wr;
 
 }
