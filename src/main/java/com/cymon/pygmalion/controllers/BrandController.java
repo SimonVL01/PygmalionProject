@@ -23,26 +23,12 @@ public class BrandController {
     @RequestMapping(method = RequestMethod.GET, path = "/all", produces = "application/json")
     public List<Brand> findAll() { return br.findAll(); }
 
-    /*@RequestMapping(method = RequestMethod.GET, path = "api/brand/{bid}", produces = "appliction/json")
-    public Brand findMostPopularUserAge(@PathVariable("bid") Integer id) {
-        return br.findById(id);
-    }*/
-
-    /*@RequestMapping(method = RequestMethod.GET, path = "/{bid}", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<Brand> create(@PathVariable("bid") int id, @RequestBody Brand brand) {
-        if (brand.getId() != null) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-        br.save(brand);
-        return new ResponseEntity<>(brand, HttpStatus.CREATED);
-    }*/
-
     @RequestMapping(method = RequestMethod.POST, value="brandname", consumes = "application/json")
     public Brand create(@RequestBody Brand brand) {
         return brand;
     }
 
-    @RequestMapping(method = RequestMethod.GET, value="{bid}", produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, value="/{bid}", produces = "application/json")
     public Brand getById(@PathVariable("bid") Integer id) {
         return br.findById(id);
     }

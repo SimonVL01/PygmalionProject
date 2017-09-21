@@ -1,16 +1,49 @@
 body {
     position: relative;
+    display: block;
     height: 100%;
+    width: 100%;
+}
+
+h1, td, th {
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
     width: 100%;
 }
 
 tr {
     width: 100%;
     height: auto;
+    background-color: Gainsboro;
+}
+
+th {
+    text-align: left;
 }
 
 td, th {
     width: 25%;
+    height: auto;
     padding: 1.5%;
-    border: 1px solid black;
+}
+
+td a {
+    padding-top: 3%; padding-bottom: 3%;
+    padding-left: 4.5%; padding-right: 4.5%;
+    text-align: center;
+    background-color: white;
+    border-radius: 30px;
+    border: 1px solid silver;
+    color: DimGray;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+td a:hover {
+    background-color: DimGray;
+    color: white;
+    transition: 0.75s;
 }
