@@ -1,14 +1,14 @@
-/*package com.cymon.pygmalion.domain;
+package com.cymon.pygmalion.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-*/
+
 /**
  * Created by simon on 19/09/17.
  */
-/*
+
 @Entity
 public class WebDevice {
 
@@ -62,4 +62,3 @@ public class WebDevice {
         this.deviceUseRatio = deviceUseRatio;
     }
 }
-*/

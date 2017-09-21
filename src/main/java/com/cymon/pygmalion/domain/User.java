@@ -42,8 +42,9 @@ public class User {
     @OneToMany(mappedBy = "followed")
     private List<User> follower;
 
-    //@OneToMany
-    //private List<WebDevice> webDevice;
+    @OneToMany
+    @JoinColumn(name = "user_id")
+    private List<WebDevice> webDevice;
 
 //Constructors
 
@@ -53,7 +54,6 @@ public class User {
         this.age = age;
         this.gender = gender;
         this.followed = followed;
-        //this.webDevice = webDevice;
     }
 
     public User() {}

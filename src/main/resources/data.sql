@@ -1,6 +1,6 @@
 insert into brand(id, fullname, companyname, companyUrl) values(2000, 'Simon Vanleeuw', 'Cy-mon Software', 'www.cymon.com');
 
-insert into brand(id, fullname, companyname, companyUrl) values(3000, 'Jimi Hendrix', 'Henrix nv', 'www.hendrix.be');
+insert into brand(id, fullname, companyname, companyUrl) values(3000, 'Jimi Hendrix', 'Hendrix nv', 'www.hendrix.be');
 insert into brand(id, fullname, companyname, companyUrl) values(4000, 'Elon Musk', 'Space X', 'www.spacex.com');
 insert into brand(id, fullname, companyname, companyUrl) values(5000, 'Janis', 'Joplin Searches', 'www.joplin.com');
 insert into brand(id, fullname, companyname, companyUrl) values(6000, 'Amy', 'Winehouse Mortuary', 'www.winehousemortuary.com');
@@ -51,5 +51,19 @@ insert into user_interest(user_id, interest_id) values(12000, 12000);
 insert into user_interest(user_id, interest_id) values(13000, 13000);
 insert into user_interest(user_id, interest_id) values(14000, 14000);
 
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(1000, 'LAPTOP', 'Macbook Air3.0', 75, 1000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(2000, 'LAPTOP', 'Macbook Air2.0', 75, 2000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(3000, 'LAPTOP', 'Macbook Air1.0', 75, 3000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(4000, 'PHONE', 'Huawei 8.0 Lite', 75, 4000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(5000, 'PHONE', 'Huawei 5.0 Lite', 75, 5000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(6000, 'PHONE', 'Huawei 5.3 Lite', 75, 6000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(7000, 'PHONE', 'Huawei 7.0 Lite', 75, 7000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(8000, 'HOMECOMPUTER', 'Imac 3.5', 75, 8000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(9000, 'HOMECOMPUTER', 'Imac 4.0', 75, 9000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(10000, 'HOMECOMPUTER', 'Imac 5.5', 75, 10000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(11000, 'TABLET', 'Ipad 102', 75, 11000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(12000, 'TABLET', 'Ipad 300', 75, 12000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(13000, 'TABLET', 'Ipad 603', 75, 13000);
+insert into interest(id, devicetype, devicename, deviceUseRatio, user_id) values(14000, 'TABLET', 'Ipad 201', 75, 14000);
 
 --insert into webDevice(id, devicetype, devicename, deviceUseRatio) values(1000, "PHONE", "Huawei Lite S800", 60);
