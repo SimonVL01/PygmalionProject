@@ -17,10 +17,10 @@ public class UserService {
     @Autowired
     UserRepository ur;
 
-    public List<User> findAll() {
+    /*public List<User> findAll() {
         System.out.println("User Service wordt gedelegeerd");
         List<User> u = ur.findAll();
         return u;
-    }
+    }*/
 
 }

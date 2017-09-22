@@ -1,16 +1,92 @@
         var $tbody = $("#brand-list-table").empty();
 
+        function createTable(jsonPath, arrayName, condition1, condition2, condition3, functionCall) {
+
+        $.getJSON(jsonPath, function(arrayName) {
+                    for(let item of arrayName) {
+
+                    let id = item.id;
+                    console.log(id);
+
+                        let $row = $('<tr>')
+                            .append($('<td>').text(condition1))
+                            .append($('<td>').text(condition2))
+                            .append($('<td>').text(condition3))
+                            .append($('<td>').append($('<a href="localhost:8090/brand/all">').text("More of " + brand.companyname)))
+
+                            $('a').attr('id', id);
+
+                            let $link = $('#' + id);
+
+                        $link.click(function(e) {
+                             e.preventDefault();
+                             functionCall();
+                        });
+
+                        $tbody.append($row);
+                    }
+             });
+        }
+
         $.getJSON("/brand/all", function(brands) {
             for(let brand of brands) {
 
-                var $row = $('<tr>')
+                let id = brand.id;
+                console.log(id);
+                let $row = $('<tr>')
                     .append($('<td>').text(brand.fullName))
                     .append($('<td>').text(brand.companyname))
                     .append($('<td>').text(brand.companyUrl))
-                    .append($('<td>').append($('<a href="localhost:8090/brand/all">').text("More of " + brand.companyname)))
+                    .append($('<td>').append($('<a href="branddetails.html?brandId=' + id + ' ">').text("More of " + brand.companyname)))
+
+                    $('a').attr('id', id);
+
+                    let $link = $('#' + id);
+
+                $link.click(function(e) {
+                     e.preventDefault();
+                     callInfo();
+                });
+
                 $tbody.append($row);
+
             }
         });
+
+        function callInfo() {
+
+            $tbody.append($('<h1>').text('Your user info'))
+
+            //Warning: duplicate code
+
+            createTable("/brand/2000/users", "user", user.firstname, user.lastname, user.age, emptyFunction)
+
+            /*$.ajax({
+
+                url: "localhost:8090/brand/6000",
+
+                data: {
+                    id: 6000
+                },
+
+                type: "GET",
+
+                dataType: "json",
+
+                success: function(json) {
+                    $("<h1>").text(json.fullName).appendTo($tbody);
+                },*/
+
+                /*error: function(xhr, status, errorThrown) {
+                    alert("We didn't find your brand");
+                }*/
+            }
+
+
+            function emptyFunction() {
+                //empty
+            }
+
 
         /*function callInfo() {
 

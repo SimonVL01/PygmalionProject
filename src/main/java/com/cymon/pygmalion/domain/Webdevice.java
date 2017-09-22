@@ -29,7 +29,10 @@ public class Webdevice {
         this.devicename = deviceName;
     }
 
-//Getters and Setters
+    public Webdevice() {
+    }
+
+    //Getters and Setters
 
     public String getDeviceType() {
         return devicetype;

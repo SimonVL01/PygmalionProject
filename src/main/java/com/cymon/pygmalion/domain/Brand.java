@@ -72,6 +72,11 @@ public class Brand {
         return targetAudience.get(indexNumber);
     }
 
+    public List<User> getTargetAudience() {
+
+        return targetAudience;
+    }
+
     public User updateTargetAudience(int indexNumber, User u) {
 
         return targetAudience.set(indexNumber, u);

@@ -3,11 +3,94 @@ body {
     display: block;
     height: 100%;
     width: 100%;
+    margin: 0%;
+    padding: 0%;
 }
 
-h1, td, th {
+* {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
+
+nav {
+    position: fixed;
+    top: 0;
+    height: 84px;
+    padding-left: 6%; padding-right: 6%;
+    width: 100%;
+    background-color: Blue;
+}
+
+nav h1 {
+    position: absolute;
+    color: white;
+    font-size: 36px;
+    letter-spacing: 1.25px;
+    margin-top: 0.75%;
+    font-size: 30px;
+}
+
+nav p {
+    position: absolute;
+    padding-top: 6.75%;
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -2.5%;
+}
+
+main {
+    margin-top: 18%;
+    width: 100%;
+    height: auto;
+    margin auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    margin: auto;
+    padding: auto;
+    display: block;
+    }
+
+input {
+    display: block;
+    min-width: 300px;
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+    margin-top: 3%; margin-bottom: 3%;
+}
+
+form div {
+    display: flex;
+    width: 100%;
+    margin-top: 6%;
+}
+
+form div a {
+    flex-direction: row;
+    text-decoration:none;
+    text-align: center;
+    color: white;
+    background-color: Blue;
+    border: 1px solid Blue;
+
+    padding-top: 6px;
+    flex: 50%;
+    height: 36px;
+    margin-left: 2.25%; margin-right: 2.25%;
+    border-radius: 6px;
+}
+
+form div a:hover {
+    background-color: white;
+    color: Blue;
+    border: 1px solid Blue;
+    transition: 0.75s;
+}
+
 
 table {
     width: 100%;

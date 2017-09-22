@@ -28,7 +28,10 @@ public class Interest {
         this.interestlevel = interestlevel;
     }
 
-//Getters & Setters
+    public Interest() {
+    }
+
+    //Getters & Setters
 
     public String getInterest() {
         return interest;
