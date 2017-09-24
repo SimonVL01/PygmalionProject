@@ -17,6 +17,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private String image;
+
     //@Column (nullable = false)
     private String firstname;
 
@@ -47,7 +49,8 @@ public class User {
 
 //Constructors
 
-    public User(String firstName, String lastName, int age, String gender, User followed) {
+    public User(String image, String firstName, String lastName, int age, String gender, User followed) {
+        this.image = image;
         this.firstname = firstName;
         this.lastname = lastName;
         this.age = age;
@@ -58,6 +61,15 @@ public class User {
     public User() {}
 
 //Getters & Setters
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public String getFirstname() {
         return firstname;

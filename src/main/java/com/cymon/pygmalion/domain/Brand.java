@@ -19,6 +19,8 @@ public class Brand {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private String image;
+
     //@Column(nullable = false)
     private String fullname;
 
@@ -32,8 +34,9 @@ public class Brand {
 
 //Constructors
 
-    public Brand(String fullname, String companyname, String companyurl, List<User> targetAudience) {
+    public Brand(String fullname, String image, String companyname, String companyurl, List<User> targetAudience) {
         this.fullname = fullname;
+        this.image = image;
         this.companyname = companyname;
         this.companyurl = companyurl;
         this.targetAudience = targetAudience;
@@ -49,6 +52,14 @@ public class Brand {
 
     public void setFullName(String fullName) {
         this.fullname = fullName;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getCompanyname() {

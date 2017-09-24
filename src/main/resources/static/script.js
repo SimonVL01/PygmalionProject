@@ -29,14 +29,6 @@
         }
     }*/
 
-        /*var personaApp = angular.module('personaApp', []);
-
-        personaApp.controller('mainController', function($scope) {
-            $scope.message = 'Everyone come and see how good I look!';
-        });*/
-
-
-
         var $tbody = $("#brand-list-table").empty();
 
         $.getJSON("/brand/all", function(brands) {

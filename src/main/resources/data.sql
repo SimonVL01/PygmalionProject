@@ -1,25 +1,24 @@
-insert into brand(id, fullname, companyname, companyUrl) values(2000, 'Simon Vanleeuw', 'Cy-mon Software', 'www.cymon.com');
+insert into brand(id, fullname, image, companyname, companyUrl) values(2000, 'Simon Vanleeuw', 'blank_icon.png', 'Cy-mon Software', 'www.cymon.com');
+insert into brand(id, fullname, image, companyname, companyUrl) values(3000, 'Jimi Hendrix', 'blank_icon.png', 'Hendrix nv', 'www.hendrix.be');
+insert into brand(id, fullname, image, companyname, companyUrl) values(4000, 'Elon Musk', 'blank_icon.png', 'Space X', 'www.spacex.com');
+insert into brand(id, fullname, image, companyname, companyUrl) values(5000, 'Janis', 'blank_icon.png', 'Joplin Searches', 'www.joplin.com');
+insert into brand(id, fullname, image, companyname, companyUrl) values(6000, 'Amy', 'blank_icon.png', 'Winehouse Rehab', 'www.isaidnonono.com');
 
-insert into brand(id, fullname, companyname, companyUrl) values(3000, 'Jimi Hendrix', 'Hendrix nv', 'www.hendrix.be');
-insert into brand(id, fullname, companyname, companyUrl) values(4000, 'Elon Musk', 'Space X', 'www.spacex.com');
-insert into brand(id, fullname, companyname, companyUrl) values(5000, 'Janis', 'Joplin Searches', 'www.joplin.com');
-insert into brand(id, fullname, companyname, companyUrl) values(6000, 'Amy', 'Winehouse Rehab', 'www.isaidnonono.com');
 
-
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(1000, 'Simon', 'Vanleeuw', 25, 'Male', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(2000, 'Janis', 'Joplin', 45, 'Female', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(3000, 'Jessica', 'Parker', 12, 'Female', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(4000, 'Helena', 'Montoya', 25, 'Female', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(5000, 'Ennoia', 'Ballard', 52, 'Male', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(6000, 'Eliah', 'Ballard', 18, 'Male', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(7000, 'Fibonacci', 'Series', 32, 'Female', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(8000, 'Harry', 'Goldfarb', 27, 'Male', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(9000, 'Sarah', 'Goldfarb', 72, 'Female', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(10000, 'Marion', 'Silver', 25, 'Female', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(11000, 'Don', 'Draper', 40, 'Male', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(12000, 'Penny', 'Gold', 27, 'Female', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(13000, 'Pete', 'Campbell', 35, 'Male', 1000, 2000);
-insert into user(id, firstname, lastname, age, gender, followed_id, brand_id) values(14000, 'Alexander', 'The Great', 34, 'Male', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(1000, 'blank_icon.png', 'Simon', 'Vanleeuw', 25, 'Male', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(2000, 'blank_icon.png', 'Janis', 'Joplin', 45, 'Female', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(3000, 'blank_icon.png', 'Jessica', 'Parker', 12, 'Female', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(4000, 'blank_icon.png', 'Helena', 'Montoya', 25, 'Female', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(5000, 'blank_icon.png', 'Ennoia', 'Ballard', 52, 'Male', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(6000, 'blank_icon.png', 'Eliah', 'Ballard', 18, 'Male', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(7000, 'blank_icon.png', 'Fibonacci', 'Series', 32, 'Female', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(8000, 'blank_icon.png', 'Harry', 'Goldfarb', 27, 'Male', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(9000, 'blank_icon.png', 'Sarah', 'Goldfarb', 72, 'Female', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(10000, 'blank_icon.png', 'Marion', 'Silver', 25, 'Female', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(11000, 'blank_icon.png', 'Don', 'Draper', 40, 'Male', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(12000, 'blank_icon.png', 'Penny', 'Gold', 27, 'Female', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(13000, 'blank_icon.png', 'Pete', 'Campbell', 35, 'Male', 1000, 2000);
+insert into user(id, image, firstname, lastname, age, gender, followed_id, brand_id) values(14000, 'blank_icon.png', 'Alexander', 'The Great', 34, 'Male', 1000, 2000);
 
 insert into interest(id, interest, interestLevel) values(1000, 'Design', 75);
 insert into interest(id, interest, interestLevel) values(2000, 'Design', 25);
