@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
     <title>Persona Generator</title>
 
     <link rel="stylesheet" type="text/css" href="stylesheet/stylesheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <script src="jquery.serializeJSON.min.js"></script>
 
 </head>
 <body>
@@ -13,26 +18,54 @@
             <h1>Persona Generator</h1>
             <p>Get a realistic face of your users</p>
         </div>
+            <img src="stylesheet/blank_icon.png"/>
     </nav>
 
-    <main>
-            <form>
+            <main>
 
-                    <label for="fullName">First name:</label>
-                    <input type="text" name="fullName" id="fullName"/>
+            <form id="ajaxform" method="post" action="/brand/all" enctype="application/json">
 
-                    <label for="companyName">Company name:</label>
-                    <input type="text" name="companyName" id="companyName"/>
-
-                    <label for="companyUrl">Company website:</label>
-                    <input type="text" name="companyUrl" id="companyUrl"/>
-
-                <div>
-                <a href="users.html">Your persona</a>
-                <a href="users.html">Other brands</a>
+                <div id="headpic">
+                <img src="stylesheet/blank_icon.png"/>
+                    <label for="img">Upload your picture</label>
+                    <input id="img" type='file' ng-model="img"/>
+                    <img ng-src="{{ img }}"/>
                 </div>
 
+                    <hr/>
+
+                    <label for="fullName">Personal name:</label>
+                    <input ng-model="name" type="text" name="fullName" id="fullName" value=""/>
+
+                    <label for="companyName">Company name:</label>
+                    <input ng-model="company" type="text" name="companyName" id="companyName" value=""/>
+
+                    <label for="companyUrl">Company website:</label>
+                    <input ng-model="url" type="text" name="companyUrl" id="companyUrl" value=""/>
+
+                <div>
+                    <button id="simplepost" type="submit" value="submit">Your Persona</button>
+                    <button type="reset" value="reset">Reset Persona</button>
+                </div>
+
+                <!--<div>
+                <a href="users.html">Your persona</a>
+                <a href="users.html">Other brands</a>
+                </div>-->
+
             </form>
+
+            <div id="data">
+                <table>
+                    <tr>
+                        <td><img ng-src="{{ img }}"/></td>
+                        <td>{{ name }}</td>
+                        <td>{{ company }}</td>
+                        <td>{{ url }}</td>
+                    </tr>
+                </table>
+            </div>
+
     </main>
 
 </body>

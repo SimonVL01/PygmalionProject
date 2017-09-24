@@ -29,6 +29,14 @@
         }
     }*/
 
+        /*var personaApp = angular.module('personaApp', []);
+
+        personaApp.controller('mainController', function($scope) {
+            $scope.message = 'Everyone come and see how good I look!';
+        });*/
+
+
+
         var $tbody = $("#brand-list-table").empty();
 
         $.getJSON("/brand/all", function(brands) {
@@ -43,11 +51,19 @@
                     .append($('<td>').text(brand.companyUrl))
                     .append($('<td>').append($('<a href="branddetails.html?brandId=' + id + '">').text("More of " + brand.companyname)))
 
+                    /*if (brand.targetAudience !== null) {
+                        for(let customer of brand.targetAudience) {
+                            let $rowCust = $('<tr>')
+                            .append($('<td>').text(customer.targetAudience.firstname))
+                            .append($('<td>').text(customer.targetAudience.lastname))
+                            .append($('<td>').text(customer.targetAudience.age))
+                            .append($('<td>').text(customer.targetAudience.interest.interest))
+                        }
+                    }*/
+
                     $('a').attr('id', id);
 
                     let $link = $('#' + id);
-
-                    //$('tr:even').css();
 
                 $link.click(function(e) {
                      e.preventDefault();
@@ -94,52 +110,34 @@
             }
 
 
-        /*function callInfo() {
 
-        var $tuser = $('#individual-brand-list-table');
+        $(document).ready(function(){
+        $("#simplepost").click(function(e)
+        {
+        var MyForm = $("#ajaxform").serializeJSON();
+        console.log(MyForm);
+         $.ajax(
+         {
+         url : "localhost:8090/brand/all",
+         type: "POST",
+         data : {
 
-        var xhr = new XmlHttpRequest();
+            fullName: 'Simon Vanleeuw',
+            companyname: 'Simon MC',
+            companyUrl: 'simon.com'
 
-        $.ajax({
-            url: "http://localhost:8090/brands/2000",
+         },
+         success:function(maindta)
+         {
 
-            data: {
-                id: 2000
-            },
+        alert(maindta);
 
-            type: "GET",
+         },
 
-            dataType: "json",
+         error: function(jqXHR, textStatus, errorThrown) {}
+            });
 
-            success: function(json ) {
-                    $("<h1>").text(json.fullName).appendTo("#individual-brand-list-table");
-                    $("<div>").html(json.html).appendTo("#individual-brand-list-table");
-            },
+         e.preventDefault();
 
-            error: function(xhr, status, errorThrown) {
-                alert("Sorry, there was a problem!");
-                console.log("Error: " + errorThrown);
-            }
-
-            complete: function(xhr, status) {
-                console.log("The request is complete")
-            }
+            });
         });
-     }*/
-
-/*<table>
-
-    <thead>
-        <tr>
-            <th>User</th>
-            <th>Interests</th>
-            <th>Device Use</th>
-        </tr>
-    </thead>
-
-    <tbody id="user-list-table">
-        <td>CN</td>
-        <td>CW</td>
-        <td>CS</td>
-    </tbody>
-</table>*/

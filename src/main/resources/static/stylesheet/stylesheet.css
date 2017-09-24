@@ -12,40 +12,109 @@ body {
     box-sizing: border-box;
 }
 
+hr {
+    background-color: Gainsboro;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
+
+#headpic {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin: 30px;
+    margin-bottom: 228px;
+    border-radius: 30px;
+}
+
+#headpic:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+#headpic:hover img {
+    margin-top: -24px;
+    transition: 0.5s;
+}
+
+#headpic:hover label {
+
+    margin-top: 24px;
+    transition: 0.5s;
+}
+
+#headpic label {
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 240px;
+    cursor: pointer;
+}
+
 nav {
     position: fixed;
     top: 0;
     height: 84px;
-    padding-left: 6%; padding-right: 6%;
     width: 100%;
     background-color: Blue;
+    z-index: 5;
+}
+
+nav div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 3%;
+    margin-top: -18px;
 }
 
 nav h1 {
-    position: absolute;
     color: white;
-    font-size: 36px;
-    letter-spacing: 1.25px;
-    margin-top: 0.75%;
     font-size: 30px;
 }
 
 nav p {
-    position: absolute;
-    padding-top: 6.75%;
+    margin-top: -27px;
     color: white;
     font-size: 18px;
     font-style: italic;
-    margin-top: -2.5%;
+}
+
+nav img {
+    position: absolute;
+    right: 0;
+    margin-right: 3%;
+    margin-top: 13.5px;
+    height: 60px;
+    width: 60px;
+}
+
+nav img:hover {
+    filter: brightness(115%);
+    transition: 0.75s;
+    cursor: pointer;
 }
 
 main {
-    margin-top: 18%;
+    margin-top: 9%;
     width: 100%;
     height: auto;
     margin auto;
     display: flex;
     flex-direction: column;
+}
+
+@media screen and(min-width: 768px) {
+    main {
+        margin-top: 18%!important;
+    }
 }
 
 form {
@@ -66,10 +135,10 @@ input {
 form div {
     display: flex;
     width: 100%;
-    margin-top: 6%;
+    margin-top: 7.5%;
 }
 
-form div a {
+    form button {
     flex-direction: row;
     text-decoration:none;
     text-align: center;
@@ -77,14 +146,20 @@ form div a {
     background-color: Blue;
     border: 1px solid Blue;
 
-    padding-top: 6px;
+    padding-top: 3px;
     flex: 50%;
-    height: 36px;
-    margin-left: 2.25%; margin-right: 2.25%;
+    font-size: 18px;
+    height: 42px;
+    margin-left: 2.25%; margin-right: 0%;
     border-radius: 6px;
+    cursor: pointer;
 }
 
-form div a:hover {
+form button:first-of-type {
+    margin-left: 0%; margin-right: 2.25%;
+}
+
+form div a:hover, form button:hover {
     background-color: white;
     color: Blue;
     border: 1px solid Blue;
@@ -94,32 +169,38 @@ form div a:hover {
 
 table {
     margin: auto;
-    margin-top: 9%;
-    width: 96%;
+    margin-top: 84px;
+    width: 100%;
     padding: 0%;
+    border-collapse: collapse;
 }
 
 tr {
     width: 100%;
-    height: auto;
+    height: 84px;
     background-color: Gainsboro;
+}
+
+tr:nth-child(even) {
+background-color: white;
 }
 
 th {
     text-align: left;
     background: DimGray;
     color: white;
-    letter-spacing: 1.25px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 td, th {
     width: 25%;
     height: 60px;
-    padding-left: 24px;
+    padding-left: 3%;
 }
 
 td a {
+    display:block;
     padding-top: 3%; padding-bottom: 3%;
     padding-left: 4.5%; padding-right: 4.5%;
     text-align: center;
@@ -129,11 +210,13 @@ td a {
     color: DimGray;
     font-size: 16px;
     text-decoration: none;
+    width: 228px;
 
 }
 
 td a:hover {
     background-color: DimGray;
+    border: 1px solid DimGray;
     color: white;
     transition: 0.75s;
 }
