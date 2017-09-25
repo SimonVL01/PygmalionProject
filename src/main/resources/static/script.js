@@ -3,32 +3,28 @@
 
      function loadBrands() {
 
-     $.getJSON('/brand/all', function() {
+         $.getJSON('/brand/all', function(data) {
 
-     //let $main = $('#brand-list-table').empty();
+             //let $main = $('#brand-list-table').empty();
 
-     let source = $('#brandTemplate').html();
+             let source = $('#brandTemplate').html();
 
-     let template = Handlebars.compile(source);
+             let template = Handlebars.compile(source);
 
-     let context = {
+             let context = {
+                brandlist: data
+             };
 
-        "brandlist": [
-        {'fullname': 'Simon', 'companyname': 'Vanleeuw', 'companyUrl': 'simba.com'},
-        {'fullname': 'Cymon', 'companyname': 'Cy-mon software', 'companyUrl': 'cymon.com'}
-        ]
-     };
-
-     /*let data = {
-         "brand.fullName": "Simon",
-         "brand.companyname": "SimonScript",
-         "brand.companyUrl": "simon.com"
-     };*/
+             /*let data = {
+                 "brand.fullName": "Simon",
+                 "brand.companyname": "SimonScript",
+                 "brand.companyUrl": "simon.com"
+             };*/
 
 
-     var output = template(context);
+             var output = template(context);
 
-     $('#brand-list-table').html(output);
+             $('#individual-brand-list-table').html(output);
 
          });
 
@@ -133,11 +129,11 @@
                  success:function(main) {
 
                     alert("kuykugkugku" + main);
-
+                    window.location.href = "http://localhost:8090/users.html";
                  },
 
                  error: function() {
-                    alert('Error!');
+                    alert('Invalid account, please insert other data.');
                  }
             });
 
@@ -172,7 +168,7 @@
         });
 
 
-var myApp = angular.module('myApp',[]);
+/*var myApp = angular.module('myApp',[]);
 
 
 function MyCtrl($scope) {
@@ -194,6 +190,6 @@ function MyCtrl($scope) {
             $scope.stepsModel.push(e.target.result);
         });
     }
-}
+}*/
 
 }());

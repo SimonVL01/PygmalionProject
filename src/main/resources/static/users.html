@@ -10,6 +10,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- -->
+
+    <script id="brandTemplate" type="text/x-handlebars-template">
+        <table>
+            <thead>
+                <tr>
+                    <th>firstname</th>
+                    <th>lastname</th>
+                    <th>age</th>
+                    <th>Web-link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each brandlist}}
+                    <tr>
+                        <td>{{ fullName }}</td>
+                        <td>{{ companyname }}</td>
+                        <td>{{ companyUrl }}</td>
+                        <td>CS</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+
 </head>
 <body>
 
@@ -21,38 +45,8 @@
     <a href="#/"><img src="stylesheet/blank_icon.png"/></a>
 </nav>
 
-    <table>
-        <thead>
-        <tr>
-            <th>firstname</th>
-            <th>lastname</th>
-            <th>age</th>
-            <th>Web-link</th>
-        </tr>
-        </thead>
-        <script id="brandTemplate" type="text/x-handlebars-template">
-        <tbody id="brand-list-table">
-
-        {{{ #each brandlist }}}
-        <tr>
-
-            <td>{{{ brand.fullname }}}</td>
-
-            <td>{{{ brand.companyname }}}</td>
-
-            <td>{{{ brand.companyUrl }}}</td>
-
-            <td>CS</td>
-
-        </tr>
-        {{{ /each }}}
-
-        </tbody>
-        </script>
-    </table>
-
-<div id="individual-brand-list-table">
-
+<div id="individual-brand-list-table" style="margin-top: 9%;">
+    test
 </div>
 
 <script src="handlebars-v4.0.10.js"></script>
