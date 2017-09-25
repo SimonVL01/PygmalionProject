@@ -15,19 +15,21 @@
         <table>
             <thead>
                 <tr>
-                    <th>firstname</th>
-                    <th>lastname</th>
-                    <th>age</th>
-                    <th>Web-link</th>
+                    <th>Personal name</th>
+                    <th>Company name</th>
+                    <th>Company url</th>
+                    <th>Company link</th>
+                    <th>Target audience</th>
                 </tr>
             </thead>
             <tbody>
                 {{#each brandlist}}
                     <tr>
-                        <td>{{ fullName }}</td>
-                        <td>{{ companyname }}</td>
-                        <td>{{ companyUrl }}</td>
-                        <td>CS</td>
+                        <td>{{{ fullName }}}</td>
+                        <td>{{{ companyname }}}</td>
+                        <td>{{{ companyUrl }}}</td>
+                        <td><a href="brand/{{{ id }}}">More of {{{ companyname }}}</a></td>
+                        <td><a class="plus" href="brands.html"><span></span><span></span></a></td>
                     </tr>
                 {{/each}}
             </tbody>
@@ -42,10 +44,10 @@
         <h1>Persona Generator</h1>
         <p>Get a realistic face of your users</p>
     </div>
-    <a href="#/"><img src="stylesheet/blank_icon.png"/></a>
+    <a href="index.html"><img src="stylesheet/blank_icon.png"/></a>
 </nav>
 
-<div id="individual-brand-list-table" style="margin-top: 9%;">
+<div id="individual-brand-list-table" style="margin-top: 84px;">
     test
 </div>
 

@@ -3,34 +3,58 @@
 
      function loadBrands() {
 
-         $.getJSON('/brand/all', function(data) {
+              $.getJSON('/brand/all', function(data) {
 
-             //let $main = $('#brand-list-table').empty();
+                  let source = $('#brandTemplate').html();
 
-             let source = $('#brandTemplate').html();
+                  let template = Handlebars.compile(source);
 
-             let template = Handlebars.compile(source);
+                  let context = {
+                     brandlist: data
+                  };
 
-             let context = {
-                brandlist: data
-             };
+                  var output = template(context);
 
-             /*let data = {
-                 "brand.fullName": "Simon",
-                 "brand.companyname": "SimonScript",
-                 "brand.companyUrl": "simon.com"
-             };*/
+                  $('#individual-brand-list-table').html(output);
 
+              });
 
-             var output = template(context);
-
-             $('#individual-brand-list-table').html(output);
-
-         });
-
-     };
+          };
 
      loadBrands();
+
+          function loadUsers() {
+
+                   $.getJSON('/brand/2000/users', function(data) {
+
+                       let source = $('#userTemplate').html();
+
+                       let template = Handlebars.compile(source);
+
+                       let context = {
+                          userlist: data
+                       };
+
+                       var output = template(context);
+
+                       $('#individual-user-list-table').html(output);
+
+                   });
+
+               };
+
+          loadUsers();
+
+     /*let $back = $('#back');
+
+     $back.hover(function() {
+     let $backButton = $('div').addClass('.backbutton');
+     let $backText = $('p').text('back to brandpage');
+     backText.appendTo(backButton);
+     $back.append(backButton);
+
+
+     });*/
 
      /*function loadGroentenLijstByPostcode(postcode) {
 
@@ -105,7 +129,6 @@
 
         $form.submit(function(e) {
 
-            //alert('test');
             e.preventDefault();
 
             let b = {
@@ -119,12 +142,10 @@
 
             $.ajax({
 
-                 url : "/brand/all",
-                 method: "POST",
-                 //dataType: 'json',
+                url : "/brand/all",
+                method: "POST",
                 contentType: 'application/json',
-                 //data : brandPost,
-                 data: JSON.stringify(b),
+                data: JSON.stringify(b),
 
                  success:function(main) {
 
