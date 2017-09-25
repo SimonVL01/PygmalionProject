@@ -91,7 +91,7 @@ nav img {
     position: absolute;
     right: 0;
     margin-right: 3%;
-    margin-top: 13.5px;
+    margin-top: 12px;
     height: 60px;
     width: 60px;
 }
@@ -146,7 +146,7 @@ form div {
     background-color: Blue;
     border: 1px solid Blue;
 
-    padding-top: 3px;
+    padding-top: 1.5px;
     flex: 50%;
     font-size: 18px;
     height: 42px;
@@ -219,4 +219,10 @@ td a:hover {
     border: 1px solid DimGray;
     color: white;
     transition: 0.75s;
+}
+
+#data {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

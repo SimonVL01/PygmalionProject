@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheet/stylesheet.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- -->
 </head>
 <body>
 
@@ -28,20 +30,32 @@
             <th>Web-link</th>
         </tr>
         </thead>
+        <script id="brandTemplate" type="text/x-handlebars-template">
         <tbody id="brand-list-table">
+
+        {{{ #each brandlist }}}
         <tr>
-            <td>NN</td>
-            <td>CN</td>
-            <td>CW</td>
+
+            <td>{{{ brand.fullname }}}</td>
+
+            <td>{{{ brand.companyname }}}</td>
+
+            <td>{{{ brand.companyUrl }}}</td>
+
             <td>CS</td>
+
         </tr>
+        {{{ /each }}}
+
         </tbody>
+        </script>
     </table>
 
 <div id="individual-brand-list-table">
 
 </div>
 
+<script src="handlebars-v4.0.10.js"></script>
 <script src="script.js"></script>
 
 </body>

@@ -25,10 +25,12 @@ public class BrandController {
     @RequestMapping(method = RequestMethod.GET, path = "/all", produces = "application/json")
     public List<Brand> findAll() { return br.findAll(); }
 
-    /*@RequestMapping(method = RequestMethod.POST, value="brandname", consumes = "application/json")
+    @RequestMapping(method = RequestMethod.POST, path="/all", consumes = "application/json", produces = "application/json")
     public Brand create(@RequestBody Brand brand) {
+        br.save(brand);
+
         return brand;
-    }*/
+    }
 
     @RequestMapping(method = RequestMethod.GET, value="/{bid}", produces = "application/json")
     public Brand getById(@PathVariable("bid") Integer id) {
