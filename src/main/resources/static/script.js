@@ -25,7 +25,7 @@
 
           function loadUsers() {
 
-                   $.getJSON('/brand/2000/users', function(data) {
+                   $.getJSON('/2000/users', function(data) {
 
                        let source = $('#userTemplate').html();
 
