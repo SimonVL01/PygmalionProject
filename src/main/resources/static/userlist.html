@@ -29,7 +29,11 @@
                 <td>{{{ lastname }}}</td>
                 <td>{{{ gender }}}</td>
                 <td>{{{ age }}}</td>
-                <td><span id="interestTemplate">{{{ interest }}}</span></td>
+                <td>
+                    {{#each interest}}
+                        <span id="interestTemplate">{{{ interest }}}</span>
+                    {{/each}}
+                </td>
             </tr>
             {{/each}}
             </tbody>
@@ -51,7 +55,7 @@
     test
 </div>
 
-<a href="deletebutton"/>
+<button id="killswitch2">Kill a user</button>
 
 <script src="handlebars-v4.0.10.js"></script>
 <script src="script.js"></script>

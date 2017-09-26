@@ -52,6 +52,23 @@
 
           loadUsers();
 
+          var $kill = $('#killswitch');
+
+          $kill.click(function() {
+            console.log('killswitch initiated!')
+            let $brand = ($('#individual-brand-list-table').children().children().children().last());
+            $brand.remove();
+          });
+
+            var $kill = $('#killswitch2');
+
+            $kill.click(function() {
+              console.log('killswitch initiated!')
+              let $brand = ($('#individual-user-list-table').children().children().children().last());
+              $brand.remove();
+              alert('Murderer!')
+            });
+
      /*let $back = $('#back');
 
      $back.hover(function() {
@@ -156,7 +173,7 @@
 
                  success:function(main) {
 
-                    alert("kuykugkugku" + main);
+                    alert("Brand " + b.companyname + " created." );
                     window.location.href = "http://localhost:8090/users.html";
                  },
 
