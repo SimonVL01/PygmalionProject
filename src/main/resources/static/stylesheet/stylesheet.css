@@ -27,13 +27,24 @@ header {
     margin-top: 84px;
     text-align: center;
     color: White;
-    cursor: pointer;
 }
 
-header:hover {
-    background-color: Silver;
+header a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 18px;
+    margin-top: 18px;
+    margin-right: 3%;
+    height: 60px;
+    width: 60px;
+    background-color: White;
+    float: right;
+    border-radius: 30px;
     color: Black;
-    transition: 1.5s;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
 }
 
 #headpic {
@@ -308,6 +319,7 @@ td a:hover {
         text-align: center;
         border: 1px solid Blue;
         cursor: pointer;
+        font-size: 16px;
     }
 
     #killswitch:hover, #killswitch2:hover {
