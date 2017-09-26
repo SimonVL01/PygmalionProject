@@ -1,7 +1,9 @@
 package com.cymon.pygmalion.controllers;
 
 import com.cymon.pygmalion.domain.Brand;
+import com.cymon.pygmalion.domain.Interest;
 import com.cymon.pygmalion.domain.User;
+import com.cymon.pygmalion.repositories.BrandRepository;
 import com.cymon.pygmalion.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,6 +26,9 @@ public class UserController {
     @Autowired
     UserRepository ur;
 
+    @Autowired
+    BrandRepository br;
+
     @RequestMapping(method = RequestMethod.GET, path = "/all", produces = "application/json")
     public List<User> findAll() { return ur.findAll(); }
 
@@ -31,5 +37,15 @@ public class UserController {
         return ur.findByFirstname(firstname);
     }
 
-    //More to come...
+    @RequestMapping(method = RequestMethod.GET, value="/{uid}/interest", produces = "application/json")
+    public List<Interest> getUserById(@PathVariable("uid") Integer id) {
+        Brand brand = br.findById(id);
+        List<Interest> uList = new ArrayList<>();
+        for (User u : brand.getTargetAudience()) {
+            uList = u.getInterest();
+        }
+        return uList;
+    }
 }
+
+

@@ -19,7 +19,7 @@
                 <th>Company name</th>
                 <th>Company url</th>
                 <th>Company link</th>
-                <th>Target audience</th>
+                <th>Interest</th>
             </tr>
             </thead>
             <tbody>
@@ -29,7 +29,7 @@
                 <td>{{{ lastname }}}</td>
                 <td>{{{ gender }}}</td>
                 <td>{{{ age }}}</td>
-                <td><a class="plus" href="brands.html"><span></span><span></span></a></td>
+                <td><span id="interestTemplate">{{{ interest }}}</span></td>
             </tr>
             {{/each}}
             </tbody>
@@ -47,9 +47,11 @@
     <a href="index.html"><img src="stylesheet/blank_icon.png"/></a>
 </nav>
 
-<div id="individual-user-list-table" style="margin-top: 84px;">
+<div id="individual-user-list-table">
     test
 </div>
+
+<a href="deletebutton"/>
 
 <script src="handlebars-v4.0.10.js"></script>
 <script src="script.js"></script>

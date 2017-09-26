@@ -5,6 +5,8 @@
 
               $.getJSON('/brand/all', function(data) {
 
+
+
                   let source = $('#brandTemplate').html();
 
                   let template = Handlebars.compile(source);
@@ -14,6 +16,11 @@
                   };
 
                   var output = template(context);
+
+                  if (data.targetAudience === null) {
+                       let $plus = $('plus').parent();
+                       $plus.css('display', 'none');
+                  }
 
                   $('#individual-brand-list-table').html(output);
 
@@ -25,7 +32,7 @@
 
           function loadUsers() {
 
-                   $.getJSON('/2000/users', function(data) {
+                   $.getJSON('brand/2000/users', function(data) {
 
                        let source = $('#userTemplate').html();
 
