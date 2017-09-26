@@ -47,6 +47,12 @@ header a {
     text-align: center;
 }
 
+header a:hover {
+    background-color: DimGray;
+    color: White;
+    transition: 0.75s;
+}
+
 #headpic {
     display: block;
     width: 60px;
