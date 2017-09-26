@@ -33,7 +33,7 @@ insert into interest(id, interest, interestLevel) values(10000, 'Fishing', 40);
 insert into interest(id, interest, interestLevel) values(11000, 'Instagram', 75);
 insert into interest(id, interest, interestLevel) values(12000, 'Instagram', 80);
 insert into interest(id, interest, interestLevel) values(13000, 'Instagram', 30);
-insert into interest(id, interest, interestLevel) values(14000, 'Instagram', 20);
+insert into interest(id, interest, interestLevel) values(14000, 'World conquest', 20);
 
 insert into user_interest(user_id, interest_id) values(1000, 1000);
 insert into user_interest(user_id, interest_id) values(2000, 2000);

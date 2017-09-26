@@ -11,14 +11,19 @@
 
     <!-- -->
 
+    <script id="brandTemplate" type="text/x-handlebars-template">
+            <span><h1>{{{brandlist.0.companyname}}}'s audience</h1></span>
+    </script>
+
     <script id="userTemplate" type="text/x-handlebars-template">
-        <table>
+
+        <table id="usertable">
             <thead>
             <tr>
-                <th>Personal name</th>
-                <th>Company name</th>
-                <th>Company url</th>
-                <th>Company link</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Gender</th>
+                <th>Age</th>
                 <th>Interest</th>
             </tr>
             </thead>
@@ -50,6 +55,10 @@
     </div>
     <a href="index.html"><img src="stylesheet/blank_icon.png"/></a>
 </nav>
+
+<header id="individual-brand-list-table">
+
+</header>
 
 <div id="individual-user-list-table">
     test
